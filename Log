@@ -1,8 +1,1 @@
- python output.csv write_csv_to_exe.py
-  File "/home/pi/apps/tester/nr2003_exe_editor/output.csv", line 1842
-    &H2EECF9,Sing,2.733333110809326,2.733333,AI 1st Gear,Engine,,,cup
-                                                ^
-SyntaxError: invalid decimal literal
-pi@hoth:~/apps/tester/nr2003_exe_editor$ python output_chassis.csv write_csv_to_exe.py
-  File "/home/pi/apps/tester/nr2003_exe_editor/output_chassis.csv", line 2
-    &H2EE57D,Sing,2222.0,3400.5,Net Weight (lbs),Chassis,,,cts
+
