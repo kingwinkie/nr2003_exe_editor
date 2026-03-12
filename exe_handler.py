@@ -256,10 +256,10 @@ class ExeHandler:
                     if len(data) == 8:
                         return struct.unpack("<d", data)[0]
                 elif data_type == "Long":
-                    # 4-byte integer
+                    # 4-byte signed integer
                     data = f.read(LONG_INT_SIZE)
                     if len(data) == LONG_INT_SIZE:
-                        return struct.unpack("<I", data)[0]
+                        return struct.unpack("<i", data)[0]
 
             return None
         except Exception as e:
@@ -297,8 +297,8 @@ class ExeHandler:
                     f.write(data)
                     return True
                 elif data_type == "Long":
-                    # 4-byte integer
-                    data = struct.pack("<I", int(value))
+                    # 4-byte signed integer
+                    data = struct.pack("<i", int(value))
                     f.write(data)
                     return True
 
