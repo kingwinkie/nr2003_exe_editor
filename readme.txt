@@ -1,3 +1,11 @@
+
+
+Update march 12 `exe_handler.py` needed to be changed - specifically line 262, changing the struct format from `<I` (unsigned) to `<i` (signed) when reading Long type values.
+**What was wrong:**
+- Reading Long used `<I` (unsigned 32-bit), so -50 became 4294967246
+- Writing Long already used `<i` (signed), causing the error when trying to pack large unsigned values as signed
+
+
 These are my files including the build directory for when I made the windows exe in python
 
 It works for me in linux mint as well in wine under linux mint the python should/might work in windows (with python installed) and there is also windows exe in the /dist/ folder that should/might work in windows ymmv
